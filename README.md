@@ -24,6 +24,8 @@ SELECT customer_name, email, city
 FROM customers;
 ```
 
+![Customer name, email, city](images/Customername_email_city.jpg)
+
 ### 2. High-value orders
 Show all orders where the total amount exceeds 40,000.
 ```sql
@@ -31,6 +33,8 @@ SELECT *
 FROM orders
 WHERE total_amount > 40000;
 ```
+
+![Orders above 40000](images/TotalOrders_Amount_40000.jpg)
 
 ### 3. Payment method filtering
 Retrieve all orders paid for with a Card.
@@ -40,6 +44,8 @@ FROM orders
 WHERE payment_method = 'Card';
 ```
 
+![Orders paid by Card](images/TotalOrders_PaymentMethod.jpg)
+
 ### 4. Ranking orders by value
 Show product name and total amount, sorted from highest to lowest.
 ```sql
@@ -48,7 +54,7 @@ FROM orders
 ORDER BY total_amount DESC;
 ```
 
-![Orders sorted by total amount](images/orders_sorted_by_amount.jpg)
+![Products sorted by total amount](images/Productname_Totalamount_DESC.jpg)
 
 ### 5. Customer segmentation by city
 Retrieve all customers based in Abuja and Lagos.
@@ -57,8 +63,6 @@ SELECT *
 FROM customers
 WHERE city IN ('Abuja', 'Lagos');
 ```
-
-![Customers in Abuja and Lagos](images/customers_abuja_lagos.jpg)
 
 ### 6. Business question — recent high-value orders from Lagos
 The sales manager wanted to see recent high-value orders specifically from Lagos, to understand performance in that market.
@@ -69,7 +73,7 @@ WHERE total_amount > 30000 AND delivery_city = 'Lagos'
 ORDER BY total_amount DESC;
 ```
 
-![High-value Lagos orders](images/lagos_high_value_orders.jpg)
+![High-value Lagos orders](images/Totalamount_Deliverycity.jpg)
 
 ## Key Insights
 
